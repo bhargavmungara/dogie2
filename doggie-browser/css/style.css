@@ -1,0 +1,285 @@
+/*********************
+Global Style/Elements
+**********************/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 25px 20px;
+}
+
+p,
+ul li,
+ol li {
+  font-size: 16px;
+  line-height: 21px;
+}
+
+#back-to-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  font-size: 12px;
+  border: none;
+  background-color: rgb(0, 167, 207);
+  color: #fff;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#back-to-top:hover {
+  background-color: #38424c;
+}
+
+/*********************
+Header
+**********************/
+
+#header {
+  background-color: #38424c;
+}
+
+#nav {
+  height: 100px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headline {
+  font-family: 'Indie Flower', cursive;
+  font-size: 60px;
+  letter-spacing: 3px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.paws-icon {
+  margin: 0 15px;
+}
+
+@media only screen and (max-width: 696px) {
+  .headline {
+    font-size: 55px;
+    line-height: 45px;
+  }
+  .paws-icon {
+    margin: 0 5px;
+  }
+}
+
+@media only screen and (max-width: 493px) {
+  .headline {
+    font-size: 50px;
+    line-height: 40px;
+  }
+}
+
+/*********************
+Search
+**********************/
+
+#search {
+  background-image: url('../media/gray-dog-pattern.jpg');
+}
+
+#search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 225px;
+}
+
+/* Select2 styling - Removing focus outline */
+
+span.select2-selection.select2-selection--single,
+input.select2-search__field {
+  outline: none;
+}
+
+/* Select2 styling - Menu height */
+
+.select2-container--default .select2-selection--single {
+  height: 50px;
+}
+
+/* Select2 styling - Adjusting placeholder text position */
+
+.select2-container .select2-selection--single .select2-selection__rendered {
+  padding-top: 10px;
+}
+
+/* Select2 styling - Adjusting menu arrow position */
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  top: 10px;
+}
+
+/* Select2 styling - Adjust dropdown container height */
+
+.select2-container--default .select2-results > .select2-results__options {
+  max-height: 250px;
+  min-height: 200px;
+  overflow-y: auto;
+}
+
+/* Select2 styling - Dropdown border */
+
+span.select2-dropdown.select2-dropdown--below {
+  border-color: rgb(0, 167, 207);
+  border-radius: 3px;
+}
+
+/* Select2 styling - Group highlighting */
+
+.select2-container--default .select2-results__group {
+  color: rgb(207, 199, 199);
+  font-style: italic;
+}
+
+/* Select2 styling - Results option highlighting */
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+  background-color: rgb(0, 167, 207);
+}
+
+/* Select2 styling - Input field */
+
+.select2-search--dropdown .select2-search__field {
+  padding: 8px;
+  font-size: 16px;
+}
+
+/*********************
+Display
+**********************/
+
+#display-breed-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 55px 33px;
+  margin-bottom: 5px;
+}
+
+#breed-name {
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 35px;
+}
+
+#results {
+  font-size: 20px;
+  font-weight: 400;
+  color: rgb(0, 167, 207);
+}
+
+#display-results {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 25px;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.image-card {
+  display: flex;
+  flex: 0 0 32%;
+  height: 300px;
+  background-color: #fff;
+  border: 1px solid #c9c9c9;
+  border-radius: 2px;
+  overflow: hidden;
+  margin: 5px;
+  padding: 17px 0;
+  box-shadow: 7px 8px 11px -6px #adabab;
+  -moz-box-shadow: 7px 8px 11px -6px #adabab;
+  -webkit-box-shadow: 7px 8px 11px -6px #adabab;
+}
+
+.image-card img {
+  margin: 0 auto;
+  width: 90%;
+}
+
+@media only screen and (max-width: 1000px) {
+  #breed-name {
+    font-size: 30px;
+    line-height: 31px;
+  }
+  #results {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 855px) {
+  .image-card {
+    flex: 0 0 48%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #breed-name {
+    font-size: 30px;
+    line-height: 31px;
+  }
+}
+
+@media only screen and (max-width: 604px) {
+  .image-card {
+    flex: 1 0 50%;
+  }
+  #display-breed-info {
+    flex-direction: column;
+    justify-content: center;
+  }
+  #breed-name {
+    font-size: 25px;
+    line-height: 27px;
+  }
+  #results {
+    margin-top: 20px;
+  }
+}
+
+/*********************
+Footer
+**********************/
+
+footer {
+  background-color: #38424c;
+  width: 100%;
+}
+
+#footer-container {
+  color: #fff;
+  margin-top: 10px;
+}
+
+#footer-container p {
+  font-size: 12px;
+  font-weight: 100;
+}
+
+#footer-container a {
+  color: rgb(0, 167, 207);
+}
